@@ -1,4 +1,4 @@
 package dataDisplay;
 
-public class Budge {
+public class Badge {
 }
