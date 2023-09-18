@@ -4,7 +4,7 @@ import org.openqa.selenium.By;
 import org.testng.Assert;
 import webElementsLogin.LoginSteps;
 
-public class AlertByCreatingClass extends LoginSteps {
+public class AlertThroughTestNG extends LoginSteps {
     public static void main(String[] args) {
         LoginSteps loginSteps = new LoginSteps();
         loginSteps.initializeDriver();
@@ -18,7 +18,7 @@ public class AlertByCreatingClass extends LoginSteps {
         //inspect the alert link and click on the element
         driver.findElement(By.xpath("//div[@class='MuiPaper-root MuiPaper-elevation MuiPaper-elevation0 MuiDrawer-paper MuiDrawer-paperAnchorLeft MuiDrawer-paperAnchorDockedLeft css-1l8j5k8']//span[@class='MuiTypography-root MuiTypography-body1 MuiListItemText-primary css-yb0lig'][normalize-space()='Alert']")).click();
 
-       AlertByCreatingClass alertByCreatingClass= new AlertByCreatingClass();
+       AlertThroughTestNG alertByCreatingClass= new AlertThroughTestNG();
        alertByCreatingClass.VerifyAlertText();
        alertByCreatingClass.VerifyErrorAlert();
 
@@ -46,7 +46,6 @@ public class AlertByCreatingClass extends LoginSteps {
 
         public void VerifyErrorAlert(){
             //print the error alert text
-
             String errorAlert= driver.findElement(By.xpath("//*[@id=\"__next\"]/div/div[2]/div/main/div/div/div[2]/div[1]/div[2]")).getText();
             System.out.println("errorAlert: " +errorAlert);
             //Verify   the error text
