@@ -21,6 +21,9 @@ public class DropDown extends LoginSteps {
         }
         //expand the OPTIONS button
         driver.findElement(By.xpath("//*[@id=\"demo-customized-button\"]")).click();
+
+        driver.findElement(By.xpath("//li[normalize-space()='Duplicate']")).click();
+        System.out.println("Duplicate Clicked");
         //Duplicate
         String expectedText= "Duplicate";
         String actualText= driver.findElement(By.xpath("//li[normalize-space()='Duplicate']")).getText();
