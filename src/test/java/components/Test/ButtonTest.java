@@ -9,18 +9,18 @@ import webElementsLogin.LoginSteps;
 
 public class ButtonTest extends LoginSteps {
 Button_POM button_pom;
-    @BeforeTest
+    @BeforeTest(groups = {"smoke"})
     public void loginWebsite(){
         initializeDriver();
         login();
         waitDriver(2000);
     }
-    @Test(priority = 1)
+    @Test(priority = 1,groups = {"smoke"})
     public void verifyButtonLink(){
         button_pom= new Button_POM();
         button_pom.clickButtonLink();
     }
-    @Test(priority = 2)
+    @Test(priority = 2,groups = {"smoke"})
     public void verifyButtonTitle(){
         button_pom.getButtonTitle();
         Assert.assertEquals(button_pom.getButtonTitle(),"Button","Text not matched");
@@ -36,6 +36,7 @@ Button_POM button_pom;
     }
     @AfterTest
     public void tearDown(){
+        driver.quit();
 
     }
 }

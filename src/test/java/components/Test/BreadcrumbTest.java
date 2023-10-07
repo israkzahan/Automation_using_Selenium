@@ -11,7 +11,7 @@ import webElementsLogin.LoginSteps;
 public class BreadcrumbTest extends LoginSteps  {
 //create an object
     Breadcrumb_POM breadcrumb_pom;
-    @BeforeTest
+    @BeforeTest(groups = {"smoke"})
     public void loginWebsite(){
         initializeDriver();
         login();
@@ -21,30 +21,31 @@ public class BreadcrumbTest extends LoginSteps  {
         }
     }
 
-    @Test(priority = 1)
+    @Test(priority = 1,groups = {"smoke"})
     public void verifyBreadcrumbLink(){
         breadcrumb_pom=new Breadcrumb_POM();
         Assert.assertTrue(breadcrumb_pom.getBreadcrumbLink());
     }
 
-    @Test(priority = 2,dependsOnMethods = {"verifyBreadcrumbLink"})
+    @Test(priority = 2,dependsOnMethods = {"verifyBreadcrumbLink"}, groups = {"smoke"})
     public void verifyBreadcrumbTitle(){
 
         Assert.assertTrue(breadcrumb_pom.getBreadcrumbTitle(),"Breadcrumb");
     }
-    @Test(priority = 3)
+    @Test(priority = 3,groups = {"smoke"})
     public void verifyBreadcrumbText(){
 
         Assert.assertTrue(breadcrumb_pom.getBreadcrumbText());
     }
 
-    @Test(priority = 4)
+    @Test(priority = 4,groups = {"smoke"})
     public void verifyCypressButton(){
         Assert.assertTrue(breadcrumb_pom.clickCypressButton());
     }
 
     @AfterTest
     public void tearDown(){
+        driver.quit();
 
     }
 }

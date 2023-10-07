@@ -34,6 +34,7 @@ public class ModalTest extends LoginSteps {
     }
     @AfterTest
     public void tearDown(){
+        driver.quit();
 
     }
 

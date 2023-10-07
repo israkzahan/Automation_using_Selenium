@@ -29,6 +29,7 @@ public class ModalTestUsingString extends LoginSteps {
     }
     @AfterTest
     public void tearDown(){
+        driver.quit();
 
     }
 

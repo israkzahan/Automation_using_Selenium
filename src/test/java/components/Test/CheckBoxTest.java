@@ -40,6 +40,6 @@ public class CheckBoxTest extends LoginSteps {
 
     @AfterTest
     public void TearDown(){
-        //driver.quit();
+        driver.quit();
     }
 }
