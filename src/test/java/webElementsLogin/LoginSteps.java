@@ -48,4 +48,12 @@ public class LoginSteps {
         //driver.findElement(By.xpath("//div[@class='ant-space-item']")).click();
 
     }
+
+    public void waitDriver(long milliseconds){
+        try {
+            Thread.sleep(milliseconds);
+        }catch (Exception e){
+//waitDriver(2000)
+        }
+    }
 }

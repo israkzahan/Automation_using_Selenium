@@ -18,6 +18,7 @@ public class CheckBox_POM extends LoginSteps {
     WebElement checkBoxClick_Two;
 
     public CheckBox_POM(){
+
         PageFactory.initElements(driver, this);
     }
 
