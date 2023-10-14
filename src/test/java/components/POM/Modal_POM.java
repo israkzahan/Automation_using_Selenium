@@ -1,6 +1,8 @@
 package components.POM;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -44,6 +46,11 @@ public class Modal_POM extends LoginSteps {
         System.out.println(secondText);
         Assert.assertEquals(secondText,"The modal component provides a solid foundation for creating dialogs, popovers, lightboxes, or whatever else.","Not matched");
 
+    }
+
+    public void pressEscapeButton(){
+        Actions actions= new Actions(driver);
+        actions.sendKeys(Keys.ESCAPE).perform();
     }
 
 

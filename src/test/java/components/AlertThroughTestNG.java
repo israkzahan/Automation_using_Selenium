@@ -21,7 +21,6 @@ public class AlertThroughTestNG extends LoginSteps {
        AlertThroughTestNG alertByCreatingClass= new AlertThroughTestNG();
        alertByCreatingClass.VerifyAlertText();
        alertByCreatingClass.VerifyErrorAlert();
-
     }
 
         public void VerifyAlertText(){

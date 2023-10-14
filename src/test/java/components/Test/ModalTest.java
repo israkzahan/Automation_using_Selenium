@@ -23,18 +23,25 @@ public class ModalTest extends LoginSteps {
     public void verifyModalLink(){
         modal_pom=new Modal_POM();
         modal_pom.clickModalButton();
-        waitDriver(2000);
+        waitDriver(3000);
         modal_pom.getModalTitle();
     }
 
     @Test(priority = 3, dependsOnMethods = {"successLogin"})
     public void verifyOpenModalButton(){
         modal_pom.clickOpenModalButton();
+        waitDriver(2000);
         modal_pom.getOpenModalText();
+    }
+
+    @Test(priority = 4)
+    public void escapeButton(){
+        waitDriver(2000);
+        modal_pom.pressEscapeButton();
     }
     @AfterTest
     public void tearDown(){
-        driver.quit();
+        //driver.quit();
 
     }
 

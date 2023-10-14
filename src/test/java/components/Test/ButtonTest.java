@@ -22,12 +22,12 @@ Button_POM button_pom;
     }
     @Test(priority = 2,groups = {"smoke"})
     public void verifyButtonTitle(){
-        button_pom.getButtonTitle();
+        //button_pom.getButtonTitle();
         Assert.assertEquals(button_pom.getButtonTitle(),"Button","Text not matched");
     }
     @Test(priority = 3)
     public void verifySecondaryButton(){
-        button_pom.getSecondaryButton();
+        //button_pom.getSecondaryButton();
         Assert.assertEquals(button_pom.getSecondaryButton(),"SECONDARY","Text not matched");
     }
     @Test(priority = 4)

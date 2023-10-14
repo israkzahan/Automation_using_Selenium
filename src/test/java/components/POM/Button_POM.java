@@ -37,7 +37,7 @@ public class Button_POM extends LoginSteps {
         waitDriver(2000);
         String secondaryText= secondaryButton.getText();
         System.out.println(secondaryText);
-        //secondaryButton.click();
+        secondaryButton.click();
         return secondaryText;
     }
     public String getSuccessButton(){

@@ -31,6 +31,7 @@ public class AlertTest_UsingString extends LoginSteps {
     }
     @Test(priority = 2)
     public void verifyErrorAlertText(){
+
         Assert.assertEquals(alert_pom_usingString.getErrorAlert(),"This is an error alert — check it out!");
 
         try {
@@ -41,6 +42,7 @@ public class AlertTest_UsingString extends LoginSteps {
 
     @Test(priority = 3)
     public void verifySuccessText(){
+
         Assert.assertEquals(alert_pom_usingString.getSuccessText(),"Success","Not Matched");
     }
 

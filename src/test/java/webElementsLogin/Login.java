@@ -2,6 +2,7 @@ package webElementsLogin;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 
 import java.util.concurrent.TimeUnit;
@@ -13,7 +14,7 @@ public class Login {
 
         //initialize the chrome driver
 
-        WebDriver driver= new EdgeDriver();
+        WebDriver driver= new ChromeDriver();
         //For maximizing the page
         driver.manage().window().maximize();
         //time manage implicitlyTimeWait
