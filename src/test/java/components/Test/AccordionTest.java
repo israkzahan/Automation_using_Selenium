@@ -20,6 +20,7 @@ public class AccordionTest extends LoginSteps  {
             Thread.sleep(3000);
 
         }catch(Exception e){}
+
     }
 
     @Test
